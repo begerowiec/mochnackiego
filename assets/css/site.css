@@ -95,10 +95,12 @@ a:hover { color: var(--color-accent); }
 .hero-video h1 span { display: block; }
 .kicker.on-dark { color: var(--color-accent-300); }
 .hero-video__address {
-  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
   margin: 18px 0 0; font-size: 16px;
   color: color-mix(in srgb, var(--color-neutral-100) 88%, transparent);
 }
+/* pinezka jako zwykły znak w wierszu — jako element flex potrafiła zostać
+   sama w linii, kiedy adres się zawijał */
+.hero-video__address svg { display: inline; vertical-align: -2px; margin-right: 6px; }
 .btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
 .btn-lg { min-height: 44px; padding: 12px 24px; letter-spacing: 0.06em;
   text-transform: uppercase; font-size: 13px; }
@@ -111,27 +113,21 @@ a:hover { color: var(--color-accent); }
   backdrop-filter: blur(4px);
 }
 .btn-on-dark:hover { background: color-mix(in srgb, var(--color-neutral-100) 18%, transparent); }
+/* Etykieta i przycisk startu siedzą w układzie treści, nie na niej. Wersja
+   "na pływająco" nakładała się na nagłówek i na przyciski przy wąskim ekranie. */
+.hero-video__meta {
+  display: flex; align-items: center; gap: 10px 14px; flex-wrap: wrap; margin: 0 0 12px;
+}
+.hero-video__meta .kicker { margin-bottom: 0; }
 .hero-video__tag {
-  position: absolute; bottom: clamp(14px, 3vw, 28px); right: clamp(20px, 5vw, 72px);
   font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
   color: color-mix(in srgb, var(--color-neutral-100) 80%, transparent);
   border: 1px solid color-mix(in srgb, var(--color-neutral-100) 35%, transparent);
-  padding: 5px 10px; background: color-mix(in srgb, var(--color-neutral-900) 30%, transparent);
+  padding: 4px 9px; background: color-mix(in srgb, var(--color-neutral-900) 30%, transparent);
 }
 /* przycisk startu widać tylko tam, gdzie filmu nie puszczamy sami (telefon,
    oszczędzanie danych, brak autoodtwarzania) */
-.hero-video__play {
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
-  font-family: var(--font-heading); font-weight: 600; font-size: 14px;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  padding: 12px 20px; border-radius: 0;
-  color: var(--color-neutral-100);
-  border: 1px solid color-mix(in srgb, var(--color-neutral-100) 60%, transparent);
-  background: color-mix(in srgb, var(--color-neutral-900) 45%, transparent);
-  backdrop-filter: blur(4px);
-}
-.hero-video__play:hover { background: color-mix(in srgb, var(--color-neutral-100) 20%, transparent); }
+.hero-video__play { cursor: pointer; }
 .hero-video__play[hidden], .hero-video.is-playing .hero-video__play { display: none; }
 
 .lead--big { font-size: 17px; max-width: 52ch; }
@@ -288,6 +284,7 @@ a:hover { color: var(--color-accent); }
 .contact-actions { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr)); }
 .contact-actions .btn { min-height: 44px; padding: 12px 20px; letter-spacing: 0.06em;
   text-transform: uppercase; font-size: 13px; }
+.contact-actions .btn[href^="mailto:"] { text-transform: none; letter-spacing: 0.02em; }
 .fine { margin: 0; font-size: 13px; line-height: 1.5;
   color: color-mix(in srgb, var(--color-text) 70%, transparent); }
 

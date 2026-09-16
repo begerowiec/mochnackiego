@@ -61,7 +61,10 @@
   <div class="hero-video__scrim" aria-hidden="true"></div>
 
   <div class="hero-video__inner wrap">
-    <span class="kicker on-dark">Dom jednorodzinny · na sprzedaż</span>
+    <p class="hero-video__meta">
+      <span class="kicker on-dark">Dom jednorodzinny · na sprzedaż</span>
+      <span class="hero-video__tag">Oblot dronem · 11 s</span>
+    </p>
     <h1><span>Cztery poziomy,</span><span>jeden dom.</span></h1>
     <p class="hero-video__address">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -70,14 +73,13 @@
     <div class="btn-row">
       <a href="#kondygnacje" class="btn btn-primary btn-lg">Zobacz kondygnacje</a>
       <a href="#kontakt" class="btn btn-on-dark btn-lg">Kontakt</a>
+      <button class="btn btn-on-dark btn-lg hero-video__play" type="button" hidden>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        Obejrzyj oblot dronem
+      </button>
     </div>
   </div>
 
-  <button class="hero-video__play" type="button" hidden>
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-    Obejrzyj dom z drona
-  </button>
-  <span class="hero-video__tag">Oblot dronem · 11 s</span>
 </header>
 
 <!-- ──────────────────────  DOM Z ZEWNĄTRZ  ────────────────────── -->
@@ -202,17 +204,17 @@
         <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
         <figcaption>Spiżarnia</figcaption>
       </figure>
-      <figure class="blueprint shot is-empty" data-label="Sauna — zdjęcie do uzupełnienia" style="--ar:3/4">
+      <figure class="blueprint shot is-empty" data-label="Dobudówka 1 — zdjęcie do uzupełnienia" style="--ar:3/4">
         <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-        <figcaption>Sauna</figcaption>
+        <figcaption>Dobudówka 1</figcaption>
       </figure>
-      <figure class="blueprint shot is-empty" data-label="Warsztat — zdjęcie do uzupełnienia" style="--ar:3/4">
+      <figure class="blueprint shot is-empty" data-label="Dobudówka 2 — zdjęcie do uzupełnienia" style="--ar:3/4">
         <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-        <figcaption>Warsztat</figcaption>
+        <figcaption>Dobudówka 2</figcaption>
       </figure>
-      <figure class="blueprint shot is-empty" data-label="Dobudówka — zdjęcie do uzupełnienia" style="--ar:3/4">
+      <figure class="blueprint shot is-empty" data-label="Dobudówka 3 — zdjęcie do uzupełnienia" style="--ar:3/4">
         <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-        <figcaption>Dobudówka</figcaption>
+        <figcaption>Dobudówka 3</figcaption>
       </figure>
     </div>
   </article>
@@ -405,14 +407,9 @@
       <hr class="rule" style="margin-bottom:16px">
       <h2 class="h-section">Klatka schodowa</h2>
       <p class="lead">Spina wszystkie cztery poziomy, od piwnicy do antresoli, i pozwala korzystać z obu mieszkań niezależnie. Schody wyłożone płytkami, z podświetleniem biegów i drewnianą balustradą.</p>
-      <p class="shot-count">6 zdjęć</p>
+      <p class="shot-count">5 zdjęć</p>
     </div>
     <div class="grid-gallery">
-      <figure class="blueprint shot" data-label="Wejście do domu — images/klatka/wejscie-do-domu.jpg" style="--ar:3/4">
-        <img src="images/klatka/wejscie-do-domu.jpg" alt="Wejście do domu" loading="lazy" decoding="async">
-        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-        <figcaption>Wejście do domu</figcaption>
-      </figure>
       <figure class="blueprint shot" data-label="Klatka — poziom wejściowy — images/klatka/klatka-01.jpg" style="--ar:4/3">
         <img src="images/klatka/klatka-01.jpg" alt="Klatka — poziom wejściowy" loading="lazy" decoding="async">
         <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
@@ -577,19 +574,17 @@
       <span class="kicker">05 · Kontakt</span>
       <hr class="rule" style="margin-bottom:16px">
       <h2 class="h-section">Umów oglądanie</h2>
-      <p class="lead">Dom najlepiej ocenić na miejscu. Zadzwoń lub napisz — pokażę każdy poziom.</p>
+      <p class="lead">Dom najlepiej ocenić na miejscu. Zadzwoń lub napisz — pokażemy każdy poziom.</p>
     </div>
     <div class="blueprint contact-card">
       <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
       <div>
         <span class="label">Osoba kontaktowa</span>
-        <span class="who"><span class="todo">[UZUPEŁNIJ: imię i nazwisko]</span></span>
+        <span class="who">Adriana Wojadzis</span>
       </div>
       <div class="contact-actions">
-        <!-- UZUPEŁNIJ: numer telefonu — także w atrybucie href (bez spacji, z +48) -->
-        <a href="tel:+48000000000" class="btn btn-primary">[UZUPEŁNIJ: telefon]</a>
-        <!-- UZUPEŁNIJ: adres e-mail — także w atrybucie href -->
-        <a href="mailto:adres@example.com" class="btn btn-secondary">Napisz e-mail</a>
+        <a href="tel:+48608087320" class="btn btn-primary">+48 608 087 320</a>
+        <a href="mailto:biuro@awnieruchomosci.pl" class="btn btn-secondary">biuro@awnieruchomosci.pl</a>
       </div>
       <p class="fine">Oglądanie możliwe w dni powszednie i w weekendy, po wcześniejszym ustaleniu terminu.</p>
     </div>
