@@ -183,8 +183,11 @@ a:hover { color: var(--color-accent); }
    najwyższego (pionowe zdjęcie) i zostawia pod podpisem szarą pustkę */
 .grid-gallery { display: grid; gap: clamp(16px, 2vw, 28px); align-items: start;
   grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); }
+/* Rzuty potrzebują szerokości, żeby dało się odczytać wymiary — dwie
+   kolumny na desktopie, jedna na telefonie. */
 .grid-plans { display: grid; gap: clamp(16px, 2vw, 28px); align-items: start;
-  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); }
+  grid-template-columns: 1fr; }
+@media (min-width: 760px) { .grid-plans { grid-template-columns: repeat(2, 1fr); } }
 .split { display: grid; gap: clamp(24px, 4vw, 56px);
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); align-items: start; }
 
@@ -266,6 +269,14 @@ a:hover { color: var(--color-accent); }
   color: color-mix(in srgb, var(--color-text) 45%, transparent);
 }
 .shot.is-missing::before { content: attr(data-label); }
+/* Rysunku technicznego nie wolno kadrować — cały rzut musi być widoczny,
+   więc zamiast cover mieścimy go w kafelku i dopełniamy jasnym tłem. */
+.shot.no-crop img { object-fit: contain; background: var(--color-neutral-100); }
+.shot.no-crop { background: var(--color-neutral-100); }
+.shot.no-crop.is-empty::before { content: "Rzut w przygotowaniu"; }
+.shot.no-crop.is-empty { background: repeating-linear-gradient(45deg,
+    transparent 0 9px, color-mix(in srgb, var(--color-text) 5%, transparent) 9px 10px); }
+
 .shot figcaption {
   border-top: 1px solid var(--color-divider); margin: 0;
   padding: 10px 14px; font-size: 12px; letter-spacing: 0.08em;
