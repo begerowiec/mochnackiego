@@ -375,6 +375,36 @@ a:hover { color: var(--color-accent); }
   color: color-mix(in srgb, var(--color-text) 70%, transparent);
 }
 
+/* — strona z materiałami do pobrania ——————————————————————————— */
+.download-box { padding: clamp(20px, 3vw, 32px); margin-top: clamp(28px, 4vw, 40px); }
+.download-box__row { display: flex; align-items: center; gap: 16px 24px; flex-wrap: wrap; }
+.download-box__meta { font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-text) 65%, transparent); }
+.download-box__meta strong { font-family: var(--font-heading); font-size: 17px; color: var(--color-text); }
+.download-box .btn svg { margin-right: 2px; }
+.download-box .fine { margin-top: 14px; }
+.download-box .fine.is-error { color: var(--color-accent-800); }
+.pasek { height: 3px; margin-top: 18px; background: color-mix(in srgb, var(--color-text) 10%, transparent); }
+.pasek > span { display: block; height: 100%; width: 0; background: var(--color-accent);
+  transition: width .25s ease; }
+
+.grupa { margin-top: clamp(32px, 5vw, 48px); }
+.grupa__tytul {
+  display: flex; align-items: baseline; gap: 12px;
+  font-family: var(--font-heading); font-weight: 600; font-size: 20px;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  margin: 0 0 16px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-divider);
+}
+.grupa__licznik { font-family: var(--font-body); font-weight: 400; font-size: 12px;
+  letter-spacing: 0.1em; color: color-mix(in srgb, var(--color-text) 50%, transparent); }
+/* kafelek jest tu odnośnikiem pobierania, nie powiększeniem */
+a.shot { display: block; text-decoration: none; color: inherit; }
+a.shot img { cursor: pointer; }
+a.shot figcaption { font-size: 11px; letter-spacing: 0.04em; text-transform: none;
+  word-break: break-all; }
+a.shot:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
 /* — lightbox ————————————————————————————————————————————————— */
 .lightbox {
   position: fixed; inset: 0; z-index: 100; display: none;
