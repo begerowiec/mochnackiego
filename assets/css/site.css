@@ -244,6 +244,46 @@ a:hover { color: var(--color-accent); }
   background: var(--color-bg);
 }
 
+/* — potencjał: jedyne pełne pole akcentu na stronie ————————————————
+   System dopuszcza je dla najgłębszego kroku rampy: stal jako tło,
+   typografia odwrócona na papier. Sekcja ma się wyróżniać, bo to ona
+   sprzedaje to, czego nie widać na zdjęciach. */
+.potential {
+  background: var(--color-accent-900);
+  color: var(--color-neutral-100);
+  border-top: 1px solid var(--color-divider);
+}
+.potential__inner { padding-block: clamp(48px, 7vw, 88px); }
+.potential .h-section { color: var(--color-neutral-100); margin-bottom: 0; }
+.rule--light { background: color-mix(in srgb, var(--color-neutral-100) 30%, transparent); }
+.lead--light { color: color-mix(in srgb, var(--color-neutral-100) 85%, transparent); }
+.potential .fine--light { color: color-mix(in srgb, var(--color-neutral-100) 68%, transparent); max-width: 62ch; }
+
+.potential__grid {
+  display: grid; gap: clamp(20px, 3vw, 32px); align-items: stretch;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  margin: clamp(32px, 5vw, 48px) 0 28px;
+}
+.potential__card {
+  padding: 24px; display: flex; flex-direction: column;
+  border: 1px solid color-mix(in srgb, var(--color-neutral-100) 28%, transparent);
+}
+.potential__card .num {
+  display: block; font-family: var(--font-heading); font-weight: 600;
+  font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--color-accent-300); margin-bottom: 8px;
+}
+.potential__card h3 {
+  font-family: var(--font-heading); font-weight: 600; font-size: 22px;
+  text-transform: uppercase; letter-spacing: 0.02em; margin: 0;
+  color: var(--color-neutral-100);
+}
+.potential__card p {
+  margin: 12px 0 0; flex: 1; font-size: 15px; line-height: 1.6;
+  color: color-mix(in srgb, var(--color-neutral-100) 82%, transparent);
+}
+.potential ::selection { background: color-mix(in srgb, var(--color-neutral-100) 30%, transparent); }
+
 /* — okolica ————————————————————————————————————————————————— */
 .dist-group + .dist-group { margin-top: 28px; }
 .dist-group h3 {
