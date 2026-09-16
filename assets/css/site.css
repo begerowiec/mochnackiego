@@ -68,7 +68,7 @@ a:hover { color: var(--color-accent); }
 /* — hero ————————————————————————————————————————————————————— */
 .hero {
   display: grid; gap: clamp(28px, 4vw, 56px);
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   align-items: end;
   padding-block: clamp(48px, 8vw, 104px) clamp(40px, 6vw, 72px);
 }
@@ -105,18 +105,6 @@ a:hover { color: var(--color-accent); }
   border-left: 1px solid var(--color-divider); white-space: nowrap;
   color: color-mix(in srgb, var(--color-text) 70%, transparent);
 }
-@media (max-width: 560px) {
-  /* na wąskim ekranie nagłówek karty układa się w pion — pionowe kreski
-     między komórkami zamieniamy na poziome, żeby nie zostawały sieroty */
-  .spec-head > span { flex: 1 0 100%; padding: 10px 20px; }
-  .spec-head > span + span { border-left: 0; border-top: 1px solid var(--color-divider); }
-  .spec-table td { padding: 12px 20px; }
-  .spec-table td:first-child { width: 50%; }
-  .spec-table td:last-child { font-size: 19px; }
-  .todo { font-size: 12px; padding: 2px 6px; white-space: normal; }
-  .dist > div { flex-wrap: wrap; gap: 2px 12px; }
-}
-
 .spec-table { table-layout: auto; }
 .spec-table td { padding: 14px 24px; }
 .spec-table td:first-child { font-size: 15px; width: 38%; }
@@ -132,18 +120,18 @@ a:hover { color: var(--color-accent); }
   font-family: var(--font-body); font-weight: 500; font-size: 14px;
   letter-spacing: 0.04em; text-transform: uppercase;
   padding: 2px 8px; border: 1px dashed var(--color-accent);
-  color: var(--color-accent-700); white-space: nowrap;
+  color: var(--color-accent-700);
 }
 
 /* — siatki ————————————————————————————————————————————————— */
 .grid-cards { display: grid; gap: clamp(20px, 3vw, 40px);
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
 .grid-gallery { display: grid; gap: clamp(16px, 2vw, 28px);
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); }
 .grid-plans { display: grid; gap: clamp(16px, 2vw, 28px);
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); }
 .split { display: grid; gap: clamp(24px, 4vw, 56px);
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); align-items: start; }
 
 .feature { padding: 24px; }
 .feature .num { display: block; font-size: 11px; letter-spacing: 0.1em;
@@ -164,7 +152,7 @@ a:hover { color: var(--color-accent); }
 
 .level {
   display: grid; gap: clamp(20px, 3vw, 40px);
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   align-items: start; scroll-margin-top: 96px;
   padding-bottom: clamp(48px, 7vw, 88px);
 }
@@ -238,7 +226,7 @@ a:hover { color: var(--color-accent); }
   margin-bottom: 4px; }
 .contact-card .who { font-family: var(--font-heading); font-weight: 600;
   font-size: 24px; letter-spacing: 0.02em; }
-.contact-actions { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.contact-actions { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr)); }
 .contact-actions .btn { min-height: 44px; padding: 12px 20px; letter-spacing: 0.06em;
   text-transform: uppercase; font-size: 13px; }
 .fine { margin: 0; font-size: 13px; line-height: 1.5;
@@ -296,4 +284,24 @@ a:hover { color: var(--color-accent); }
   .site-nav, .lightbox, .btn-row, .contact-actions { display: none !important; }
   .section { break-inside: avoid; }
   .reveal-ready [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+
+/* — dostrojenie wąskich ekranów (na końcu, żeby nic tego nie nadpisało) — */
+@media (max-width: 560px) {
+  /* na wąskim ekranie nagłówek karty układa się w pion — pionowe kreski
+     między komórkami zamieniamy na poziome, żeby nie zostawały sieroty */
+  .spec-head > span { flex: 1 0 100%; padding: 10px 20px; }
+  .spec-head > span + span { border-left: 0; border-top: 1px solid var(--color-divider); }
+  .spec-table td { padding: 12px 20px; }
+  .spec-table td:first-child { width: 50%; }
+  .spec-table td:last-child { font-size: 19px; }
+  .todo { font-size: 12px; padding: 2px 6px; }
+  .dist > div { flex-wrap: wrap; gap: 2px 12px; }
+}
+
+@media (max-width: 400px) {
+  /* najwęższe telefony: nagłówek hero to jedno długie słowo — zbijamy
+     rozmiar, żeby nie rozpychał strony w poziomie */
+  .hero h1 { font-size: clamp(30px, 8.5vw, 84px); }
+  .h-section { font-size: clamp(24px, 7vw, 38px); }
 }
