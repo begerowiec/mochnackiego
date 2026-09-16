@@ -64,6 +64,14 @@ a:hover { color: var(--color-accent); }
   .site-nav { position: static; }
   .nav-links { display: flex; flex-wrap: wrap; gap: 10px 18px; width: 100%; }
 }
+/* Sześć odnośników plus przycisk nie mieści się w jednym wierszu poniżej
+   1366 px — zamiast łamać pasek na dwie linie, ściskamy odstępy. */
+@media (min-width: 861px) and (max-width: 1365px) {
+  .site-nav { gap: 14px; padding-inline: clamp(20px, 3vw, 40px); }
+  .site-nav .nav-brand { font-size: 16px; }
+  .site-nav .uppercase-link { font-size: 12px; letter-spacing: 0.04em; }
+  .site-nav .btn-primary { padding-inline: 14px; }
+}
 
 /* — hero z filmem z drona ——————————————————————————————————— */
 .hero-video {
@@ -165,8 +173,12 @@ a:hover { color: var(--color-accent); }
 }
 
 /* — siatki ————————————————————————————————————————————————— */
-.grid-cards { display: grid; gap: clamp(20px, 3vw, 40px);
-  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
+/* Stała liczba kolumn zamiast auto-fit: przy sześciu kartach auto-fit
+   potrafił zostawić samotny kafelek w ostatnim rzędzie. 3 / 2 / 1 dzieli
+   sześć równo na każdej szerokości. */
+.grid-cards { display: grid; gap: clamp(20px, 3vw, 40px); grid-template-columns: 1fr; }
+@media (min-width: 620px) { .grid-cards { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px) { .grid-cards { grid-template-columns: repeat(3, 1fr); } }
 /* align-items:start — bez tego kafelek w rzędzie rozciąga się do wysokości
    najwyższego (pionowe zdjęcie) i zostawia pod podpisem szarą pustkę */
 .grid-gallery { display: grid; gap: clamp(16px, 2vw, 28px); align-items: start;
@@ -176,12 +188,12 @@ a:hover { color: var(--color-accent); }
 .split { display: grid; gap: clamp(24px, 4vw, 56px);
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); align-items: start; }
 
-.feature { padding: 24px; }
+.feature { padding: 24px; display: flex; flex-direction: column; }
 .feature .num { display: block; font-size: 11px; letter-spacing: 0.1em;
   text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 8px; }
 .feature h3 { font-family: var(--font-heading); font-weight: 600; font-size: 22px;
   text-transform: uppercase; letter-spacing: 0.02em; margin: 0; }
-.feature p { margin: 12px 0 0; font-size: 15px; line-height: 1.6;
+.feature p { margin: 12px 0 0; font-size: 15px; line-height: 1.6; flex: 1;
   color: color-mix(in srgb, var(--color-text) 78%, transparent); }
 
 .room-list { margin: 16px 0 0; padding: 0; list-style: none; display: grid; gap: 6px;
