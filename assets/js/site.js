@@ -21,9 +21,9 @@
   /* --- 2. Odsłanianie sekcji --------------------------------------------- */
   var reveals = document.querySelectorAll('[data-reveal]');
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!('IntersectionObserver' in window) || reduced) {
-    document.body.classList.add('reveal-off');
-  } else {
+  if ('IntersectionObserver' in window && !reduced) {
+    // dopiero teraz wolno chować sekcje — patrz komentarz w site.css
+    document.documentElement.classList.add('reveal-ready');
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (!e.isIntersecting) return;
@@ -32,12 +32,16 @@
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
     Array.prototype.forEach.call(reveals, function (n) { io.observe(n); });
-    // awaryjnie: gdyby obserwator nie zdążył, po sekundzie pokaż co widoczne
+    // dwie siatki bezpieczeństwa: gdyby obserwator nie zadziałał, treść
+    // i tak się pojawi — najpierw to, co w kadrze, potem wszystko.
     setTimeout(function () {
       Array.prototype.forEach.call(reveals, function (n) {
         if (n.getBoundingClientRect().top < window.innerHeight) n.classList.add('is-visible');
       });
     }, 1200);
+    window.addEventListener('beforeprint', function () {
+      Array.prototype.forEach.call(reveals, function (n) { n.classList.add('is-visible'); });
+    });
   }
 
   /* --- 3. Podświetlanie aktywnej sekcji w nawigacji ----------------------- */

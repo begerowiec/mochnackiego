@@ -105,6 +105,18 @@ a:hover { color: var(--color-accent); }
   border-left: 1px solid var(--color-divider); white-space: nowrap;
   color: color-mix(in srgb, var(--color-text) 70%, transparent);
 }
+@media (max-width: 560px) {
+  /* na wąskim ekranie nagłówek karty układa się w pion — pionowe kreski
+     między komórkami zamieniamy na poziome, żeby nie zostawały sieroty */
+  .spec-head > span { flex: 1 0 100%; padding: 10px 20px; }
+  .spec-head > span + span { border-left: 0; border-top: 1px solid var(--color-divider); }
+  .spec-table td { padding: 12px 20px; }
+  .spec-table td:first-child { width: 50%; }
+  .spec-table td:last-child { font-size: 19px; }
+  .todo { font-size: 12px; padding: 2px 6px; white-space: normal; }
+  .dist > div { flex-wrap: wrap; gap: 2px 12px; }
+}
+
 .spec-table { table-layout: auto; }
 .spec-table td { padding: 14px 24px; }
 .spec-table td:first-child { font-size: 15px; width: 38%; }
@@ -265,19 +277,23 @@ a:hover { color: var(--color-accent); }
 @keyframes dsFade { from { opacity: 0; } to { opacity: 1; } }
 @keyframes dsDraw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
-[data-reveal] { opacity: 0; transform: translateY(28px); }
-[data-reveal].is-visible { opacity: 1; transform: none;
-  transition: opacity .8s cubic-bezier(.16,.84,.24,1), transform .8s cubic-bezier(.16,.84,.24,1); }
-.no-js [data-reveal], .reveal-off [data-reveal] { opacity: 1; transform: none; }
+/* Treść jest domyślnie widoczna. Ukrywamy ją dopiero wtedy, gdy skrypt
+   potwierdzi, że umie ją odsłonić (klasa .reveal-ready na <html>) — dzięki
+   temu awaria JS-a nigdy nie chowa oferty przed kupującym. */
+.reveal-ready [data-reveal] {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity .8s cubic-bezier(.16,.84,.24,1), transform .8s cubic-bezier(.16,.84,.24,1);
+}
+.reveal-ready [data-reveal].is-visible { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .reveal-ready [data-reveal] { opacity: 1 !important; transform: none !important; }
   .hero-copy, .hero-figure, .rule--draw { animation: none !important; }
 }
 
 @media print {
   .site-nav, .lightbox, .btn-row, .contact-actions { display: none !important; }
   .section { break-inside: avoid; }
-  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .reveal-ready [data-reveal] { opacity: 1 !important; transform: none !important; }
 }
