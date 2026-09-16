@@ -59,7 +59,40 @@
     sections.forEach(function (s) { if (s) spy.observe(s); });
   }
 
-  /* --- 4. Lightbox -------------------------------------------------------- */
+  /* --- 4. Hero z filmem ---------------------------------------------------
+     Film waży kilka megabajtów, więc sam z siebie startuje tylko na dużym
+     ekranie i przy zwykłym łączu. Na telefonie, przy oszczędzaniu danych
+     albo gdy ktoś prosi o mniej ruchu — zostaje nieruchomy kadr i przycisk. */
+  var hero = document.querySelector('.hero-video');
+  if (hero) {
+    var vid = hero.querySelector('.hero-video__media');
+    var playBtn = hero.querySelector('.hero-video__play');
+    var conn = navigator.connection || {};
+    var thrifty = conn.saveData === true || /2g/.test(conn.effectiveType || '');
+    var autoOk = window.matchMedia('(min-width: 820px)').matches && !thrifty && !reduced;
+
+    var start = function () {
+      vid.preload = 'auto';
+      var p = vid.play();
+      if (p && p.catch) p.catch(function () { if (playBtn) playBtn.hidden = false; });
+      hero.classList.add('is-playing');
+    };
+
+    if (autoOk) {
+      start();
+    } else if (playBtn) {
+      playBtn.hidden = false;
+      playBtn.addEventListener('click', start);
+    }
+
+    // film nie ma po co mielić, kiedy karta jest w tle
+    document.addEventListener('visibilitychange', function () {
+      if (!hero.classList.contains('is-playing')) return;
+      if (document.hidden) vid.pause(); else vid.play().catch(function () {});
+    });
+  }
+
+  /* --- 5. Lightbox -------------------------------------------------------- */
   var box = document.getElementById('lightbox');
   if (!box) return;
   var boxImg = box.querySelector('img');

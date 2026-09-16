@@ -3,4 +3,11 @@ Thumbs.db
 *.log
 .idea/
 .vscode/
+
+# oryginały zdjęć i filmu — zostają lokalnie, do repo idą wersje webowe
+images/_oryginaly/
+images/_web/
+video/_oryginal/
+
+# śmieci po operacjach gita (sesja nie ma prawa kasować plików w tym folderze)
 _to_delete/

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dom na sprzedaż — Mochnackiego 1a, Wrocław Karłowice</title>
-<meta name="description" content="Wolnostojący dom jednorodzinny na sprzedaż przy ul. Mochnackiego 1a we Wrocławiu (Karłowice). Cztery kondygnacje, dwa niezależne mieszkania, sauna, warsztat, taras i balkon.">
+<meta name="description" content="Wolnostojący dom jednorodzinny na sprzedaż przy ul. Mochnackiego 1a we Wrocławiu (Karłowice). Cztery kondygnacje, dwa niezależne mieszkania, sauna, warsztat, taras i balkon. Film z drona i galeria każdego poziomu.">
 <meta name="author" content="Oferta prywatna">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://begerowiec.github.io/sell-house/">
@@ -13,7 +13,7 @@
 <meta property="og:locale" content="pl_PL">
 <meta property="og:title" content="Dom na sprzedaż — Mochnackiego 1a, Wrocław Karłowice">
 <meta property="og:description" content="Cztery kondygnacje, dwa niezależne mieszkania, sauna i warsztat. Karłowice — willowa, zielona północ Wrocławia, 4,8 km od Rynku.">
-<meta property="og:image" content="images/dom/zewnatrz-01.jpg">
+<meta property="og:image" content="images/zewnatrz/elewacja-01.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f2f2f3'/%3E%3Cpath d='M5 15 16 6l11 9v12H5z' fill='none' stroke='%235980a6' stroke-width='2'/%3E%3C/svg%3E">
@@ -26,7 +26,6 @@
   "@context": "https://schema.org",
   "@type": "SingleFamilyResidence",
   "name": "Dom jednorodzinny — ul. Mochnackiego 1a, Wrocław",
-  "numberOfRooms": 0,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Maurycego Mochnackiego 1a",
@@ -53,30 +52,60 @@
   <a href="#kontakt" class="btn btn-primary uppercase-link" style="min-height:36px;padding:8px 18px">Umów oglądanie</a>
 </nav>
 
-<!-- ─────────────────────────────  HERO  ───────────────────────────── -->
-<header class="wrap hero">
-  <div class="hero-copy">
-    <span class="kicker">Dom jednorodzinny · na sprzedaż</span>
-    <hr class="rule rule--draw">
+<!-- ────────────────────  HERO: FILM Z DRONA  ──────────────────── -->
+<header class="hero-video">
+  <video class="hero-video__media" poster="images/zewnatrz/dom-z-drona-poster.jpg"
+         muted loop playsinline preload="none" tabindex="-1">
+    <source src="video/dom-z-drona.mp4" type="video/mp4">
+  </video>
+  <div class="hero-video__scrim" aria-hidden="true"></div>
+
+  <div class="hero-video__inner wrap">
+    <span class="kicker on-dark">Dom jednorodzinny · na sprzedaż</span>
     <h1><span>Cztery poziomy,</span><span>jeden dom.</span></h1>
-    <p>Piwnica z dobudówką, dwa pełne piętra i trzecie piętro z antresolą. W układzie domu są dwa niezależne mieszkania — na poziomie piwnicy i na trzecim piętrze. Każda kondygnacja pokazana osobno, z własną galerią i rzutem.</p>
-    <p class="address-line">
+    <p class="hero-video__address">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
       ul. Maurycego Mochnackiego 1a, 51-122 Wrocław — Karłowice
     </p>
     <div class="btn-row">
       <a href="#kondygnacje" class="btn btn-primary btn-lg">Zobacz kondygnacje</a>
-      <a href="#kontakt" class="btn btn-secondary btn-lg">Kontakt</a>
+      <a href="#kontakt" class="btn btn-on-dark btn-lg">Kontakt</a>
     </div>
   </div>
-  <figure class="blueprint shot hero-figure" data-label="Zdjęcie domu z zewnątrz — images/dom/zewnatrz-01.jpg" style="--ar:4/3">
-    <img src="images/dom/zewnatrz-01.jpg" alt="Dom przy ul. Mochnackiego 1a we Wrocławiu — widok z zewnątrz" loading="eager" decoding="async">
-    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-  </figure>
+
+  <button class="hero-video__play" type="button" hidden>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+    Obejrzyj dom z drona
+  </button>
+  <span class="hero-video__tag">Oblot dronem · 11 s</span>
 </header>
 
+<!-- ──────────────────────  DOM Z ZEWNĄTRZ  ────────────────────── -->
+<section class="wrap section intro" data-reveal>
+  <div class="split">
+    <div>
+      <span class="kicker">Dom z zewnątrz</span>
+      <hr class="rule" style="margin-bottom:16px">
+      <p class="lead lead--big">Piwnica z dobudówką, dwa pełne piętra i trzecie piętro z antresolą. W układzie domu są dwa niezależne mieszkania — na poziomie piwnicy i na trzecim piętrze. Każda kondygnacja pokazana osobno, z własną galerią.</p>
+      <p class="lead">Zabudowa szeregowa w karłowickim miasteczku-ogrodzie: cicha uliczka, zieleń pod oknami, wszystko na miejscu w zasięgu spaceru.</p>
+    </div>
+    <div class="grid-gallery">
+      <figure class="blueprint shot" data-label="Elewacja — images/zewnatrz/elewacja-01.jpg" style="--ar:16/9">
+        <img src="images/zewnatrz/elewacja-01.jpg" alt="Dom przy ul. Mochnackiego 1a — widok z lotu ptaka od ulicy" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Widok od ulicy</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Elewacja — images/zewnatrz/elewacja-02.jpg" style="--ar:16/9">
+        <img src="images/zewnatrz/elewacja-02.jpg" alt="Dom przy ul. Mochnackiego 1a — widok od strony ogrodu" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Widok od zieleni</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ─────────────────────────────  DANE  ───────────────────────────── -->
-<section id="dane" class="wrap" style="padding-bottom:clamp(40px,6vw,72px);scroll-margin-top:88px">
+<section id="dane" class="wrap section">
   <div class="blueprint" data-reveal style="padding:0">
     <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
     <header class="spec-head">
@@ -85,7 +114,6 @@
       <span>Wolnostojący</span>
     </header>
     <table class="table spec-table">
-      <caption class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Podstawowe dane nieruchomości</caption>
       <tbody>
         <tr><td>Powierzchnia użytkowa</td><td><span class="todo">[UZUPEŁNIJ: m²]</span></td></tr>
         <tr><td>Powierzchnia działki</td><td><span class="todo">[UZUPEŁNIJ: m²]</span></td></tr>
@@ -101,7 +129,7 @@
 </section>
 
 <!-- ─────────────────────────────  ATUTY  ──────────────────────────── -->
-<section id="atuty" class="wrap" data-reveal style="padding-bottom:clamp(40px,6vw,72px);scroll-margin-top:88px">
+<section id="atuty" class="wrap section" data-reveal>
   <span class="kicker">Atuty</span>
   <hr class="rule" style="margin-bottom:28px">
   <div class="grid-cards">
@@ -133,7 +161,7 @@
 </section>
 
 <!-- ──────────────────────────  KONDYGNACJE  ───────────────────────── -->
-<section id="kondygnacje" class="wrap" style="padding-bottom:clamp(56px,8vw,96px);scroll-margin-top:88px">
+<section id="kondygnacje" class="wrap section">
   <span class="kicker">Dom poziom po poziomie</span>
   <hr class="rule">
   <div class="level-nav">
@@ -145,7 +173,7 @@
   </div>
 
   <article id="poziom-0" class="level" data-reveal>
-    <div>
+    <div class="level-copy">
       <span class="kicker">00 · Poziom piwnicy</span>
       <hr class="rule" style="margin-bottom:16px">
       <h2 class="h-section">Piwnica i dobudówka</h2>
@@ -156,59 +184,188 @@
         <li>Piec, pralnia, spiżarnia</li>
         <li>Niezależne mieszkanie w dobudówce</li>
       </ul>
+      <p class="shot-count">3 zdjęcia</p>
     </div>
     <div class="grid-gallery">
-      <figure class="blueprint shot" data-label="Piwnica — images/dom/piwnica-01.jpg"><img src="images/dom/piwnica-01.jpg" alt="Piwnica — zdjęcie 1" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
-      <figure class="blueprint shot" data-label="Piwnica — images/dom/piwnica-02.jpg"><img src="images/dom/piwnica-02.jpg" alt="Piwnica — zdjęcie 2" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
-      <figure class="blueprint shot" data-label="Dobudówka — images/dom/dobudowka-01.jpg"><img src="images/dom/dobudowka-01.jpg" alt="Dobudówka — zdjęcie 1" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
-      <figure class="blueprint shot" data-label="Dobudówka — images/dom/dobudowka-02.jpg"><img src="images/dom/dobudowka-02.jpg" alt="Dobudówka — zdjęcie 2" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
+      <figure class="blueprint shot" data-label="Piec i uzdatnianie wody — images/piwnica/piec.jpg" style="--ar:3/4">
+        <img src="images/piwnica/piec.jpg" alt="Piec i uzdatnianie wody" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Piec i uzdatnianie wody</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Pralnia — images/piwnica/pralnia.jpg" style="--ar:3/4">
+        <img src="images/piwnica/pralnia.jpg" alt="Pralnia" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Pralnia</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Spiżarnia — images/piwnica/spizarnia.jpg" style="--ar:3/4">
+        <img src="images/piwnica/spizarnia.jpg" alt="Spiżarnia" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Spiżarnia</figcaption>
+      </figure>
+      <figure class="blueprint shot is-empty" data-label="Sauna — zdjęcie do uzupełnienia" style="--ar:3/4">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Sauna</figcaption>
+      </figure>
+      <figure class="blueprint shot is-empty" data-label="Warsztat — zdjęcie do uzupełnienia" style="--ar:3/4">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Warsztat</figcaption>
+      </figure>
+      <figure class="blueprint shot is-empty" data-label="Dobudówka — zdjęcie do uzupełnienia" style="--ar:3/4">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Dobudówka</figcaption>
+      </figure>
     </div>
   </article>
 
   <article id="poziom-1" class="level" data-reveal>
-    <div>
+    <div class="level-copy">
       <span class="kicker">01 · Pierwsze piętro</span>
       <hr class="rule" style="margin-bottom:16px">
       <h2 class="h-section">1. piętro</h2>
-      <p class="lead">Część dzienna: salon, kuchnia z jadalnią i łazienka z wanną. Z tego poziomu wychodzi się na taras. W mieszkaniu znajduje się bar z oczkiem wodnym.</p>
+      <p class="lead">Część dzienna: salon otwarty na kuchnię z jadalnią, łazienka z wanną i wyjście na taras. Osobnym punktem jest bar z oczkiem wodnym.</p>
       <ul class="room-list">
         <li>Salon</li>
-        <li>Kuchnia z jadalnią</li>
+        <li>Kuchnia z wyspą i jadalnią</li>
         <li>Łazienka z wanną</li>
         <li>Wyjście na taras</li>
         <li>Bar z oczkiem wodnym</li>
       </ul>
+      <p class="shot-count">12 zdjęć</p>
     </div>
     <div class="grid-gallery">
-      <figure class="blueprint shot" data-label="1. piętro — images/dom/pietro1-01.jpg"><img src="images/dom/pietro1-01.jpg" alt="1. piętro — zdjęcie 1" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
-      <figure class="blueprint shot" data-label="1. piętro — images/dom/pietro1-02.jpg"><img src="images/dom/pietro1-02.jpg" alt="1. piętro — zdjęcie 2" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
-      <figure class="blueprint shot" data-label="1. piętro — images/dom/pietro1-03.jpg"><img src="images/dom/pietro1-03.jpg" alt="1. piętro — zdjęcie 3" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
-      <figure class="blueprint shot" data-label="1. piętro — images/dom/pietro1-04.jpg"><img src="images/dom/pietro1-04.jpg" alt="1. piętro — zdjęcie 4" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
+      <figure class="blueprint shot" data-label="Salon — images/pietro-1/salon-01.jpg" style="--ar:4/3">
+        <img src="images/pietro-1/salon-01.jpg" alt="Salon" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Salon</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Salon — strefa TV — images/pietro-1/salon-02.jpg" style="--ar:4/3">
+        <img src="images/pietro-1/salon-02.jpg" alt="Salon — strefa TV" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Salon — strefa TV</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Jadalnia z kuchnią — images/pietro-1/jadalnia.jpg" style="--ar:4/3">
+        <img src="images/pietro-1/jadalnia.jpg" alt="Jadalnia z kuchnią" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Jadalnia z kuchnią</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Kuchnia z wyspą — images/pietro-1/kuchnia-01.jpg" style="--ar:4/3">
+        <img src="images/pietro-1/kuchnia-01.jpg" alt="Kuchnia z wyspą" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Kuchnia z wyspą</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Kuchnia — zabudowa — images/pietro-1/kuchnia-02.jpg" style="--ar:4/3">
+        <img src="images/pietro-1/kuchnia-02.jpg" alt="Kuchnia — zabudowa" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Kuchnia — zabudowa</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Bar z oczkiem wodnym — images/pietro-1/bar-oczko-wodne.jpg" style="--ar:4/3">
+        <img src="images/pietro-1/bar-oczko-wodne.jpg" alt="Bar z oczkiem wodnym" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Bar z oczkiem wodnym</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Bar — images/pietro-1/bar-01.jpg" style="--ar:4/3">
+        <img src="images/pietro-1/bar-01.jpg" alt="Bar" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Bar</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Bar — zaplecze — images/pietro-1/bar-02.jpg" style="--ar:4/3">
+        <img src="images/pietro-1/bar-02.jpg" alt="Bar — zaplecze" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Bar — zaplecze</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Łazienka z wanną — images/pietro-1/lazienka.jpg" style="--ar:4/3">
+        <img src="images/pietro-1/lazienka.jpg" alt="Łazienka z wanną" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Łazienka z wanną</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Wyjście na taras — images/pietro-1/taras.jpg" style="--ar:4/3">
+        <img src="images/pietro-1/taras.jpg" alt="Wyjście na taras" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Wyjście na taras</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Przedpokój — images/pietro-1/przedpokoj.jpg" style="--ar:4/3">
+        <img src="images/pietro-1/przedpokoj.jpg" alt="Przedpokój" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Przedpokój</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Wejście na poziom — images/pietro-1/wejscie.jpg" style="--ar:3/4">
+        <img src="images/pietro-1/wejscie.jpg" alt="Wejście na poziom" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Wejście na poziom</figcaption>
+      </figure>
     </div>
   </article>
 
   <article id="poziom-2" class="level" data-reveal>
-    <div>
+    <div class="level-copy">
       <span class="kicker">02 · Drugie piętro</span>
       <hr class="rule" style="margin-bottom:16px">
       <h2 class="h-section">2. piętro</h2>
-      <p class="lead">Strefa sypialna: trzy sypialnie oraz rozdzielony węzeł sanitarny — toaleta i prysznic osobno.</p>
+      <p class="lead">Strefa nocna: sypialnie i pokoje przy wspólnym przedpokoju, z rozdzielonym węzłem sanitarnym — toaleta i prysznic osobno.</p>
       <ul class="room-list">
-        <li>Trzy sypialnie</li>
+        <li>Sypialnie i pokoje</li>
+        <li>Sypialnia z garderobą</li>
         <li>Toaleta</li>
         <li>Prysznic osobno</li>
       </ul>
+      <p class="shot-count">10 zdjęć</p>
     </div>
     <div class="grid-gallery">
-      <figure class="blueprint shot" data-label="2. piętro — images/dom/pietro2-01.jpg"><img src="images/dom/pietro2-01.jpg" alt="2. piętro — zdjęcie 1" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
-      <figure class="blueprint shot" data-label="2. piętro — images/dom/pietro2-02.jpg"><img src="images/dom/pietro2-02.jpg" alt="2. piętro — zdjęcie 2" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
-      <figure class="blueprint shot" data-label="2. piętro — images/dom/pietro2-03.jpg"><img src="images/dom/pietro2-03.jpg" alt="2. piętro — zdjęcie 3" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
-      <figure class="blueprint shot" data-label="2. piętro — images/dom/pietro2-04.jpg"><img src="images/dom/pietro2-04.jpg" alt="2. piętro — zdjęcie 4" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
+      <figure class="blueprint shot" data-label="Sypialnia — images/pietro-2/sypialnia-01.jpg" style="--ar:4/3">
+        <img src="images/pietro-2/sypialnia-01.jpg" alt="Sypialnia" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Sypialnia</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Sypialnia — drugie ujęcie — images/pietro-2/sypialnia-02.jpg" style="--ar:4/3">
+        <img src="images/pietro-2/sypialnia-02.jpg" alt="Sypialnia — drugie ujęcie" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Sypialnia — drugie ujęcie</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Sypialnia z garderobą — images/pietro-2/sypialnia-z-garderoba.jpg" style="--ar:4/3">
+        <img src="images/pietro-2/sypialnia-z-garderoba.jpg" alt="Sypialnia z garderobą" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Sypialnia z garderobą</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Sypialnia / pracownia — images/pietro-2/sypialnia-pracownia.jpg" style="--ar:4/3">
+        <img src="images/pietro-2/sypialnia-pracownia.jpg" alt="Sypialnia / pracownia" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Sypialnia / pracownia</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Pokój — images/pietro-2/pokoj-01.jpg" style="--ar:4/3">
+        <img src="images/pietro-2/pokoj-01.jpg" alt="Pokój" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Pokój</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Pokój — images/pietro-2/pokoj-02.jpg" style="--ar:4/3">
+        <img src="images/pietro-2/pokoj-02.jpg" alt="Pokój" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Pokój</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Toaleta — images/pietro-2/toaleta.jpg" style="--ar:4/3">
+        <img src="images/pietro-2/toaleta.jpg" alt="Toaleta" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Toaleta</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Prysznic — images/pietro-2/prysznic.jpg" style="--ar:4/3">
+        <img src="images/pietro-2/prysznic.jpg" alt="Prysznic" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Prysznic</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Przedpokój — images/pietro-2/przedpokoj-01.jpg" style="--ar:4/3">
+        <img src="images/pietro-2/przedpokoj-01.jpg" alt="Przedpokój" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Przedpokój</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Przedpokój — rozkład drzwi — images/pietro-2/przedpokoj-02.jpg" style="--ar:4/3">
+        <img src="images/pietro-2/przedpokoj-02.jpg" alt="Przedpokój — rozkład drzwi" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Przedpokój — rozkład drzwi</figcaption>
+      </figure>
     </div>
   </article>
 
   <article id="poziom-3" class="level" data-reveal>
-    <div>
+    <div class="level-copy">
       <span class="kicker">03 · Trzecie piętro</span>
       <hr class="rule" style="margin-bottom:16px">
       <h2 class="h-section">3. piętro z antresolą</h2>
@@ -220,57 +377,96 @@
         <li>Łazienka</li>
         <li>Balkon i antresola</li>
       </ul>
+      
     </div>
     <div class="grid-gallery">
-      <figure class="blueprint shot" data-label="3. piętro — images/dom/pietro3-01.jpg"><img src="images/dom/pietro3-01.jpg" alt="3. piętro — zdjęcie 1" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
-      <figure class="blueprint shot" data-label="3. piętro — images/dom/pietro3-02.jpg"><img src="images/dom/pietro3-02.jpg" alt="3. piętro — zdjęcie 2" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
-      <figure class="blueprint shot" data-label="Antresola — images/dom/antresola-01.jpg"><img src="images/dom/antresola-01.jpg" alt="Antresola — zdjęcie 1" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
-      <figure class="blueprint shot" data-label="Antresola — images/dom/antresola-02.jpg"><img src="images/dom/antresola-02.jpg" alt="Antresola — zdjęcie 2" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
+      <figure class="blueprint shot is-empty" data-label="Mieszkanie — zdjęcie do uzupełnienia" style="--ar:4/3">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Mieszkanie</figcaption>
+      </figure>
+      <figure class="blueprint shot is-empty" data-label="Kuchnia z jadalnią — zdjęcie do uzupełnienia" style="--ar:4/3">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Kuchnia z jadalnią</figcaption>
+      </figure>
+      <figure class="blueprint shot is-empty" data-label="Antresola — zdjęcie do uzupełnienia" style="--ar:4/3">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Antresola</figcaption>
+      </figure>
+      <figure class="blueprint shot is-empty" data-label="Balkon — zdjęcie do uzupełnienia" style="--ar:4/3">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Balkon</figcaption>
+      </figure>
     </div>
   </article>
 
   <article id="klatka" class="level" data-reveal>
-    <div>
+    <div class="level-copy">
       <span class="kicker">04 · Komunikacja</span>
       <hr class="rule" style="margin-bottom:16px">
       <h2 class="h-section">Klatka schodowa</h2>
-      <p class="lead">Spina wszystkie cztery poziomy, od piwnicy do antresoli, i pozwala korzystać z obu mieszkań niezależnie.</p>
-      <p class="lead"><span class="todo">[UZUPEŁNIJ: opcjonalny opis — materiał schodów, doświetlenie, wejście]</span></p>
+      <p class="lead">Spina wszystkie cztery poziomy, od piwnicy do antresoli, i pozwala korzystać z obu mieszkań niezależnie. Schody wyłożone płytkami, z podświetleniem biegów i drewnianą balustradą.</p>
+      <p class="shot-count">6 zdjęć</p>
     </div>
     <div class="grid-gallery">
-      <figure class="blueprint shot" data-label="Klatka — images/dom/klatka-01.jpg"><img src="images/dom/klatka-01.jpg" alt="Klatka schodowa — zdjęcie 1" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
-      <figure class="blueprint shot" data-label="Klatka — images/dom/klatka-02.jpg"><img src="images/dom/klatka-02.jpg" alt="Klatka schodowa — zdjęcie 2" loading="lazy" decoding="async"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
+      <figure class="blueprint shot" data-label="Wejście do domu — images/klatka/wejscie-do-domu.jpg" style="--ar:3/4">
+        <img src="images/klatka/wejscie-do-domu.jpg" alt="Wejście do domu" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Wejście do domu</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Klatka — poziom wejściowy — images/klatka/klatka-01.jpg" style="--ar:4/3">
+        <img src="images/klatka/klatka-01.jpg" alt="Klatka — poziom wejściowy" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Klatka — poziom wejściowy</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Klatka — bieg schodów — images/klatka/klatka-02.jpg" style="--ar:4/3">
+        <img src="images/klatka/klatka-02.jpg" alt="Klatka — bieg schodów" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Klatka — bieg schodów</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Klatka — wejście na piętro — images/klatka/klatka-03.jpg" style="--ar:4/3">
+        <img src="images/klatka/klatka-03.jpg" alt="Klatka — wejście na piętro" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Klatka — wejście na piętro</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Klatka — widok z góry — images/klatka/klatka-04.jpg" style="--ar:4/3">
+        <img src="images/klatka/klatka-04.jpg" alt="Klatka — widok z góry" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Klatka — widok z góry</figcaption>
+      </figure>
+      <figure class="blueprint shot" data-label="Wyjście na zadaszony balkon — images/klatka/wyjscie-na-balkon.jpg" style="--ar:4/3">
+        <img src="images/klatka/wyjscie-na-balkon.jpg" alt="Wyjście na zadaszony balkon" loading="lazy" decoding="async">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Wyjście na zadaszony balkon</figcaption>
+      </figure>
     </div>
   </article>
+
 </section>
 
 <!-- ─────────────────────────────  RZUTY  ──────────────────────────── -->
 <section id="rzuty" class="wrap section" data-reveal>
   <span class="kicker">06 · Rzuty kondygnacji</span>
   <hr class="rule">
-  <h2 class="h-section" style="margin-bottom:28px">Plan domu</h2>
-  <div class="grid-plans">
-    <figure class="blueprint shot no-duotone" data-label="Rzut — images/rzuty/rzut-piwnica.jpg" style="--ar:1/1">
-      <img src="images/rzuty/rzut-piwnica.jpg" alt="Rzut — piwnica i dobudówka" loading="lazy" decoding="async">
-      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-      <figcaption>Piwnica + dobudówka</figcaption>
-    </figure>
-    <figure class="blueprint shot no-duotone" data-label="Rzut — images/rzuty/rzut-pietro1.jpg" style="--ar:1/1">
-      <img src="images/rzuty/rzut-pietro1.jpg" alt="Rzut — 1. piętro" loading="lazy" decoding="async">
-      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-      <figcaption>1. piętro</figcaption>
-    </figure>
-    <figure class="blueprint shot no-duotone" data-label="Rzut — images/rzuty/rzut-pietro2.jpg" style="--ar:1/1">
-      <img src="images/rzuty/rzut-pietro2.jpg" alt="Rzut — 2. piętro" loading="lazy" decoding="async">
-      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-      <figcaption>2. piętro</figcaption>
-    </figure>
-    <figure class="blueprint shot no-duotone" data-label="Rzut — images/rzuty/rzut-pietro3.jpg" style="--ar:1/1">
-      <img src="images/rzuty/rzut-pietro3.jpg" alt="Rzut — 3. piętro z antresolą" loading="lazy" decoding="async">
-      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-      <figcaption>3. piętro + antresola</figcaption>
-    </figure>
-  </div>
+  <h2 class="h-section">Plan domu</h2>
+  <p class="lead" style="margin-bottom:28px">Rzuty czterech poziomów. <span class="todo">[UZUPEŁNIJ: wrzuć skany rzutów do images/rzuty/ — nazwy w images/README.md]</span></p>
+    <div class="grid-plans">
+      <figure class="blueprint shot is-empty" data-label="Rzut — piwnica i dobudówka" style="--ar:1/1">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Rzut — piwnica i dobudówka</figcaption>
+      </figure>
+      <figure class="blueprint shot is-empty" data-label="Rzut — 1. piętro" style="--ar:1/1">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Rzut — 1. piętro</figcaption>
+      </figure>
+      <figure class="blueprint shot is-empty" data-label="Rzut — 2. piętro" style="--ar:1/1">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Rzut — 2. piętro</figcaption>
+      </figure>
+      <figure class="blueprint shot is-empty" data-label="Rzut — 3. piętro z antresolą" style="--ar:1/1">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption>Rzut — 3. piętro z antresolą</figcaption>
+      </figure>
+    </div>
 </section>
 
 <!-- ────────────────────────────  OKOLICA  ─────────────────────────── -->
