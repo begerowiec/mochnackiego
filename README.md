@@ -1,88 +1,17 @@
-# Dom na sprzedaż — ul. Mochnackiego 1a, Wrocław
+# Dom na sprzedaż — Mochnackiego 1a, Wrocław
 
-Jednostronicowa wizytówka domu, przepisana z mockupu `Dom na sprzedaz.dc.html`
-na statyczną stronę gotową pod GitHub Pages.
-
-## Technologia
-
-Czysty **HTML + CSS + vanilla JS**. Bez frameworka, bez `npm install`,
-bez kroku budowania — GitHub Pages serwuje pliki takie, jakie są w repo.
-Dla wizytówki jednej nieruchomości to najlepszy wybór: najszybsze ładowanie,
-zero zależności do aktualizowania, edycja treści w jednym pliku HTML.
-
-```
-index.html                 cała treść strony
-assets/css/tokens.css      design system "Industry" z mockupu (kolory, fonty, komponenty)
-assets/css/site.css        układ i styl tej konkretnej strony
-assets/js/site.js          hero z filmem, lightbox, animacje wejścia, nawigacja
-images/                    zdjęcia po kondygnacjach — patrz images/README.md
-video/                     film z drona — patrz video/README.md
-.github/workflows/deploy.yml   automatyczna publikacja na GitHub Pages
-.nojekyll                  wyłącza Jekylla (pliki i katalogi z podkreśleniem)
-```
-
-Cała strona z mediami waży ok. 17 MB — mieści się w GitHub Pages bez zadyszki.
-Oryginały zdjęć i filmu leżą lokalnie w `images/_oryginaly/` i `video/_oryginal/`,
-poza repo (`.gitignore`).
-
-## Co trzeba jeszcze uzupełnić
-
-Wszystkie brakujące dane są oznaczone w kodzie jako `[UZUPEŁNIJ: …]`
-i na stronie wyświetlają się w przerywanej ramce. Znajdziesz je komendą:
-
-```bash
-grep -n "UZUPEŁNIJ" index.html
-```
-
-Do uzupełnienia: metraż, powierzchnia działki, liczba pokoi, rok budowy,
-ogrzewanie, stan, forma własności i cena. Dane kontaktowe są już wpisane
-(Adrianna Wojadzis, +48 608 087 320, biuro@awnieruchomosci.pl).
-
-Zdjęcia: 34 wrzucone zdjęcia są już poukładane po kondygnacjach. Brakuje
-kadrów z 3. piętra, dobudówki, sauny i warsztatu oraz rzutów — te miejsca
-pokazują kreskowaną kratkę „zdjęcie w przygotowaniu". Jak je uzupełnić,
-opisuje `images/README.md`.
-
-### Ukrycie ceny
-
-Usuń (albo zakomentuj) wiersz `<tr class="price">` w `index.html`.
+Statyczna wizytówka domu. Strona: https://begerowiec.github.io/mochnackiego/
 
 ## Podgląd lokalnie
 
 ```bash
 python3 -m http.server 8000
-# http://localhost:8000
 ```
 
-## Publikacja na GitHub Pages
+http://localhost:8000 — push na `main` publikuje stronę.
 
-1. Załóż puste repozytorium na GitHubie (np. `sell-house`).
-2. W tym katalogu:
+## Do uzupełnienia
 
-   ```bash
-   git remote add origin git@github.com:begerowiec/sell-house.git
-   git branch -M main
-   git push -u origin main
-   ```
+W `index.html` pola `[UZUPEŁNIJ]`: metraż, działka, pokoje, rok budowy, ogrzewanie, stan, własność, cena. Żeby ukryć cenę, usuń wiersz `<tr class="price">`.
 
-3. W repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-4. Workflow `deploy.yml` odpali się sam przy każdym pushu na `main`.
-   Strona stanie pod `https://begerowiec.github.io/sell-house/`.
-
-> Jeśli wolisz prostszy wariant bez Actions: **Settings → Pages → Source:
-> Deploy from a branch → `main` / `(root)`**. Plik `.nojekyll` już jest,
-> więc wszystko zadziała tak samo. Wtedy `deploy.yml` możesz skasować.
-
-### Własna domena
-
-Dodaj plik `CNAME` z samą nazwą domeny (np. `mochnackiego1a.pl`),
-a u operatora domeny ustaw rekordy A na adresy GitHub Pages.
-Pamiętaj wtedy zmienić `<link rel="canonical">` i `og:url` w `index.html`.
-
-## Dane o okolicy
-
-Odległości w sekcji „Okolica" policzone dla współrzędnych
-**51.1412614, 17.0391537** (ul. Mochnackiego 1a) — punkty z OpenStreetMap,
-trasy drogowe przez OSRM. Opis dzielnicy na podstawie historii Karłowic
-(miasto-ogród *Gartenstadt Carlowitz*, 1911, Paul Schmitthenner;
-włączone do Wrocławia w 1928).
+Brakujące zdjęcia (3. piętro, dobudówka, sauna, warsztat, rzuty) — `images/README.md`.
