@@ -14,11 +14,16 @@ zero zależności do aktualizowania, edycja treści w jednym pliku HTML.
 index.html                 cała treść strony
 assets/css/tokens.css      design system "Industry" z mockupu (kolory, fonty, komponenty)
 assets/css/site.css        układ i styl tej konkretnej strony
-assets/js/site.js          lightbox, animacje wejścia, podświetlanie nawigacji
-images/                    zdjęcia — patrz images/README.md
+assets/js/site.js          hero z filmem, lightbox, animacje wejścia, nawigacja
+images/                    zdjęcia po kondygnacjach — patrz images/README.md
+video/                     film z drona — patrz video/README.md
 .github/workflows/deploy.yml   automatyczna publikacja na GitHub Pages
 .nojekyll                  wyłącza Jekylla (pliki i katalogi z podkreśleniem)
 ```
+
+Cała strona z mediami waży ok. 17 MB — mieści się w GitHub Pages bez zadyszki.
+Oryginały zdjęć i filmu leżą lokalnie w `images/_oryginaly/` i `video/_oryginal/`,
+poza repo (`.gitignore`).
 
 ## Co trzeba jeszcze uzupełnić
 
@@ -33,7 +38,10 @@ Do uzupełnienia: metraż, powierzchnia działki, liczba pokoi, rok budowy,
 ogrzewanie, stan, forma własności, cena oraz dane kontaktowe
 (imię i nazwisko, telefon — także w `href="tel:…"`, e-mail — także w `href="mailto:…"`).
 
-Zdjęcia: wrzuć pliki do `images/` według nazw z `images/README.md`.
+Zdjęcia: 34 wrzucone zdjęcia są już poukładane po kondygnacjach. Brakuje
+kadrów z 3. piętra, dobudówki, sauny i warsztatu oraz rzutów — te miejsca
+pokazują kreskowaną kratkę „zdjęcie w przygotowaniu". Jak je uzupełnić,
+opisuje `images/README.md`.
 
 ### Ukrycie ceny
 
