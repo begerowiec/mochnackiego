@@ -223,13 +223,30 @@ a:hover { color: var(--color-accent); }
 
 /* — figury / zdjęcia ————————————————————————————————————————— */
 .shot { margin: 0; position: relative; background: var(--color-neutral-200); }
+/* Miniaturka zawsze w tej samej proporcji, niezależnie od tego, czy zdjęcie
+   jest poziome czy pionowe — inaczej jeden pionowy kadr rozpycha cały rząd.
+   Pionowe są dokadrowane do środka; pełny kadr pokazuje powiększenie. */
 .shot img {
-  display: block; width: 100%; height: auto; object-fit: cover;
+  display: block; width: 100%; height: auto;
   aspect-ratio: var(--ar, 4/3);
+  object-fit: cover; object-position: center;
   cursor: zoom-in;
   transition: filter .25s ease;
 }
 .shot img:hover { filter: brightness(1.04) saturate(1.05); }
+
+/* znak, że kliknięcie pokaże zdjęcie w całości */
+.shot:has(img)::after {
+  content: ""; position: absolute; top: 10px; right: 10px;
+  width: 30px; height: 30px; pointer-events: none;
+  opacity: 0; transition: opacity .2s ease;
+  background:
+    color-mix(in srgb, var(--color-neutral-900) 45%, transparent)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f8' stroke-width='1.5' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-4.3-4.3M11 8v6M8 11h6'/%3E%3C/svg%3E")
+    center / 17px 17px no-repeat;
+}
+.shot:has(img):hover::after, .shot:has(img:focus-visible)::after { opacity: 1; }
+@media (hover: none) { .shot:has(img)::after { opacity: 1; } }
 
 /* Kafelek bez zdjęcia: albo celowo pusty (.is-empty), albo plik nie doszedł
    (.is-missing dokłada skrypt). Wygląda tak samo — kreskowana kratka
