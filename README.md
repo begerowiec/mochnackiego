@@ -36,7 +36,7 @@ grep -n "UZUPEŁNIJ" index.html
 
 Do uzupełnienia: metraż, powierzchnia działki, liczba pokoi, rok budowy,
 ogrzewanie, stan, forma własności i cena. Dane kontaktowe są już wpisane
-(Adriana Wojadzis, +48 608 087 320, biuro@awnieruchomosci.pl).
+(Adrianna Wojadzis, +48 608 087 320, biuro@awnieruchomosci.pl).
 
 Zdjęcia: 34 wrzucone zdjęcia są już poukładane po kondygnacjach. Brakuje
 kadrów z 3. piętra, dobudówki, sauny i warsztatu oraz rzutów — te miejsca
